@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6950F6B8-A37B-4C41-9103-FEED1E7D7962}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PMOSYS</RootNamespace>
+    <AssemblyName>PMOSYS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Con_Cls.cs" />
+    <Compile Include="frmConsultant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultant.Designer.cs">
+      <DependentUpon>frmConsultant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateProject.Designer.cs">
+      <DependentUpon>frmCreateProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartments.Designer.cs">
+      <DependentUpon>frmDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelath_and_Safety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelath_and_Safety.Designer.cs">
+      <DependentUpon>frmHelath_and_Safety.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInterface.Designer.cs">
+      <DependentUpon>frmInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssues.Designer.cs">
+      <DependentUpon>frmIssues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeyMilestone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeyMilestone.Designer.cs">
+      <DependentUpon>frmKeyMilestone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeyMilestones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeyMilestones.Designer.cs">
+      <DependentUpon>frmKeyMilestones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlantManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlantManager.Designer.cs">
+      <DependentUpon>frmPlantManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewProject.Designer.cs">
+      <DependentUpon>frmNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlants.Designer.cs">
+      <DependentUpon>frmPlants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPojectProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPojectProcess.Designer.cs">
+      <DependentUpon>frmPojectProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectManager.Designer.cs">
+      <DependentUpon>frmProjectManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRisk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRisk.Designer.cs">
+      <DependentUpon>frmRisk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSite.Designer.cs">
+      <DependentUpon>frmSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockHolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockHolder.Designer.cs">
+      <DependentUpon>frmStockHolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZone.Designer.cs">
+      <DependentUpon>frmZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectDash.Designer.cs">
+      <DependentUpon>ProjectDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmConsultant.resx">
+      <DependentUpon>frmConsultant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateProject.resx">
+      <DependentUpon>frmCreateProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartments.resx">
+      <DependentUpon>frmDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelath_and_Safety.resx">
+      <DependentUpon>frmHelath_and_Safety.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInterface.resx">
+      <DependentUpon>frmInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssues.resx">
+      <DependentUpon>frmIssues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeyMilestone.resx">
+      <DependentUpon>frmKeyMilestone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeyMilestones.resx">
+      <DependentUpon>frmKeyMilestones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlantManager.resx">
+      <DependentUpon>frmPlantManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewProject.resx">
+      <DependentUpon>frmNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlants.resx">
+      <DependentUpon>frmPlants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPojectProcess.resx">
+      <DependentUpon>frmPojectProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectManager.resx">
+      <DependentUpon>frmProjectManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRisk.resx">
+      <DependentUpon>frmRisk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSite.resx">
+      <DependentUpon>frmSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockHolder.resx">
+      <DependentUpon>frmStockHolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmZone.resx">
+      <DependentUpon>frmZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MilestoneRpt.rdlc" />
+    <EmbeddedResource Include="ProjectDash.resx">
+      <DependentUpon>ProjectDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beautiful-color-gradients-backgrounds-047-fly-high.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gradient background color pack Wallpapers 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\376-3766802_consulting-data-analytics-icon-black-clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-var-flat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\393-3932208_it-consulting-services-design-and-implementation-icon.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
